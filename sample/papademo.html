@@ -1,0 +1,86 @@
+<html>
+<head>
+
+	<body>
+
+<div id="id01"></div>
+<script>
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+        // out += '<a href="' + arr[i].url + '">' + 
+        // arr[i].display + '</a><br>';
+        out += arr[i].FIELD3 + '<br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+<script src="convertcsv.json"></script>
+
+</body>
+</head>
+	<!-- <script type="text/javascript" src="convertcsv.json"></script>
+             <script type="text/javascript" >
+                function load(data) {
+                     var mydata = JSON.parse(data);
+                     alert(mydata.length);
+
+                     var div = document.getElementById('data');
+
+                     for(var i = 0;i < mydata.length; i++)
+                     {
+                        // div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].UserID +"</p>" + "<br>";
+                        div.innerHTML = mydata[i].UserID + "<br>";
+                     }
+                 }
+        </script> -->
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script> -->
+
+<!-- <script>
+
+    $(function() {
+
+
+   var people = [];
+
+   $.getJSON('convertcsv.json', function(data) {
+       $.each(data.convert, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.FIELD3 + "</td>" +
+           "<td>" + f.FIELD4 + "</td>" + "<td>" + f.FIELD5 + "</td>" + "<td>" + f.FIELD6 + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script> -->
+<!-- </head> -->
+
+<!-- <body>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "userdata" border="2">
+  <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>City</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+
+</body> -->
+<!-- <body onload="load">
+    <div id= "data">
+
+    </div>
+</body> -->
+</html>
